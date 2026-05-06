@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const all = await getCollection('articles', ({ data }) => !data.draft);
+const articles = all.sort(
+  (a, b) => (b.data.pubDate?.getTime() ?? 0) - (a.data.pubDate?.getTime() ?? 0)
+);
+
+const monthYear = (d?: Date) =>
+  d
+    ? d
+        .toLocaleDateString('en-US', { year: 'numeric', month: 'short' })
+        .toLowerCase()
+    : '';
+---
+<BaseLayout
+  title="Jeff Helwig"
+  description="Notes on AI-assisted coding, product, and the work in between."
+>
+  <section class="max-w-3xl mx-auto px-6 pt-20 pb-10">
+    <h1 class="font-mono text-3xl font-semibold tracking-tight">jeff helwig</h1>
+    <p class="italic muted text-lg mt-2">I am working, not writing.</p>
+    <div class="flex gap-5 mt-5 text-sm font-mono items-center">
+      <a
+        href="https://www.linkedin.com/in/jeffhelwig/"
+        class="muted hover:text-[var(--color-ink)] hover:underline underline-offset-4 decoration-1"
+      >linkedin</a>
+      <span class="muted text-xs">·</span>
+      <a
+        href="mailto:jeff.helwig@gmail.com"
+        class="muted hover:text-[var(--color-ink)] hover:underline underline-offset-4 decoration-1"
+      >email</a>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 pb-24">
+    <ol>
+      <li class="grid grid-cols-[100px_1fr] gap-x-8 pb-14 last:pb-0">
+        <div class="relative text-right muted text-sm font-mono pt-2 border-r border-[var(--color-rule)] pr-6">
+          2026 —
+          <span class="timeline-dot" aria-hidden="true"></span>
+        </div>
+        <div class="flex gap-5 pt-1">
+          <div class="placeholder-thumb shrink-0" aria-hidden="true"></div>
+          <div class="flex-1">
+            <p>
+              Building a product (in beta) and writing about AI-assisted coding,
+              project management with AI, and the work in between.
+            </p>
+            <p class="muted text-sm mt-3 font-mono">
+              articles will appear here as they're published.
+            </p>
+          </div>
+        </div>
+      </li>
+
+      {
+        articles.map((article) => (
+          <li class="grid grid-cols-[100px_1fr] gap-x-8 pb-14 last:pb-0">
+            <div class="relative text-right muted text-sm font-mono pt-2 border-r border-[var(--color-rule)] pr-6">
+              {monthYear(article.data.pubDate)}
+              <span class="timeline-dot" aria-hidden="true"></span>
+            </div>
+            <div class="flex gap-5 pt-1">
+              <div class="placeholder-thumb shrink-0" aria-hidden="true"></div>
+              <div class="flex-1">
+                <a href={`/articles/${article.id}/`} class="block group">
+                  <div class="font-medium group-hover:underline underline-offset-2">
+                    {article.data.title}
+                  </div>
+                  {article.data.description && (
+                    <p class="muted mt-1 text-sm">{article.data.description}</p>
+                  )}
+                </a>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</BaseLayout>
