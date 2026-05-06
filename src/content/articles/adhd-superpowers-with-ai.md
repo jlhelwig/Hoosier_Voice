@@ -1,6 +1,6 @@
 ---
 title: "Claude called it a prosthetic. I called it a superpower."
-draft: true
+draft: false
 ---
 
 Claude hurt my feelings last week.
