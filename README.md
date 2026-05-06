@@ -1,24 +1,9 @@
 # Hoosier_Voice
 
-I'm Jeff Helwig, I think about this new thing -- AI coding. I have thoughts about my experience, my tools, and how it helps Product Managers and Project Managers and single users of AI assisted coding.
+Hi I am Jeff Helwig, a Project Manager and Entrepreneur who works with AI to code. This is my writing tool that helps me organize, and keeps my drafts in some sort of order for my personal Reference.
 
-This is where I keep them.
+I come from Indiana and my writing by accident or by unconscious design sounds a lot like Kurt Vonnegut... not my choice, but it is what it is. This helps me tone it down for B2B and keeps it lively for straight to consumer.
 
-## What's in here
+I am very interested in ai coding tools, governance and making local ai's. I will be writing about my experiences and table turning sessions, with an eye to help product managers and product oriented project managers, and also single user ai coders.
 
-- An Astro + Tailwind site. The articles live as markdown in `src/content/articles/`.
-- Articles in various states. Some published. Some drafted. Some are still working titles waiting for me to find the angle.
-- Reference and stash files start with an underscore — they're working material, not articles.
-
-## Running it locally
-
-```bash
-npm install
-npm run dev
-```
-
-That's it.
-
-## A note on what's drafted vs. what's done
-
-If you click around the article files and something reads polished and bland, that's a draft I haven't gotten to yet. The published versions sound like a person.
+Look for articles on my medium... I promise I am taking some time to write.
