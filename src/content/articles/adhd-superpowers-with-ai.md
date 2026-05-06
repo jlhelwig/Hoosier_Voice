@@ -37,11 +37,13 @@ I thought about scope like a kid who wants to watch another hour of TV, but know
 
 Here's what's in CLAUDE.md for scope creep:
 
+```
 Scope discipline. Leanest solution first. Scope test fires before anything else on any new capability/command/tool/feature. Tag and flag non-MVP immediately: "This is [SaaS/IMPROVEMENT] — park in TODO, stay on MVP?" Implementation only after explicit user confirmation. Claude pre-tags its own proposals.
 
-[MVP] — Test: "Can any customer use {product} at all without this?" No → MVP.
-[SaaS] — Self-customer test: "Would we use this on {product}-on-{product} today?" Yes → SaaS. No → IMPROVEMENT.
-[IMPROVEMENT] — Polish / Coverage / Support. Test: "Can we ship MVP and charge for SaaS without this?" Yes → park in TODO, do not build.
+[MVP] — Test: "Can any customer use {product} at all without this?" No -> MVP.
+[SaaS] — Self-customer test: "Would we use this on {product}-on-{product} today?" Yes -> SaaS. No -> IMPROVEMENT.
+[IMPROVEMENT] — Polish / Coverage / Support. Test: "Can we ship MVP and charge for SaaS without this?" Yes -> park in TODO, do not build.
+```
 
 What did this do? I shipped MVP on time. My Beta is one day away from being ready early!
 
