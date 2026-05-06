@@ -4,3 +4,6 @@ dist/
 .env
 .env.production
 .DS_Store
+
+# Confidential drafts — not for public release
+src/content/articles/_whitepaper-ai-governance-scaffold.md
