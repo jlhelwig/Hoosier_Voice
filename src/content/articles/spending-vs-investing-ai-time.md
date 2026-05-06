@@ -3,79 +3,22 @@ title: "I stopped spending my AI time and started investing it"
 draft: true
 ---
 
-[Seed for piece #5, 2026-05-06. Spine: spending vs. investing your AI time. Audience priority: PMs, then builders-afraid-to-step-up, then engineers as bonus.]
+I was watching YouTube and an interesting short popped up, it was a tool called [claude-mem](https://github.com/thedotmack/claude-mem) that the youtuber was really excited about. It captures Claude conversations and gives the ai memory across sessions.
+My honest thought: if this is news, no one is investing in their tools. They're just writing code and suffering needlessly. This isn't a breakthrough. This is what every coder should be doing.
+I built a tool called uncompactor, it is on my dev machine, and works across all projects in my dev/ folder. It captures every conversation I have with the ai. When I need the context back, a simple prompt call in the context box pulls the relevant conversations. The details are not important. The importance is that you need tools to work effectively with ai.
+These tools compound in value over time. They don't have to be complicated like uncompactor. Just realize there are frustrations working with ai and try to reduce that friction or improve your workflow.
+For instance, I actually hate when the ai starts writing code, when I am asking a question, or wanting a pro or con, or a pushback on bad ideas. So, I have in my CLAUDE.md:
+- Prompt ends in "?" → analyze and answer; do not edit files unless explicitly asked.
+I have a working todo.md and a temp_todo.md. Temp todo is working memory of what we are working on now, those change according to what I am working on right now, my todo list doesn't.
+So in CLAUDE.md I have:
+## Response structure (temp_todo.md)
+**3+ action items / findings → write to `temp_todo.md`** 
+I work through the items in temp todo one at a time. This is helpful when you ask, 'what are the steps involved in getting this feature, and what input do you need from me?'
+These are little friction points that can be remedied with small tools, you can deploy today.
+You don't need an uncompactor today, but just be aware of the friction you have while working. Think 'what can the ai do to solve this friction point?' Talk about it with your ai, they often have very helpful ideas.
+Someone built claude-mem. I built the uncompactor. Same problem, two different solutions. The point isn't whose tool is better. The point is we both saw the friction and built something to fix it.
 
-## Captured anecdotes (raw material — not drafted prose)
+You don't have to build something crazy, just a line or two in your CLAUDE.md can change how you work, and how you feel about working with ai. 
+These tiny steps compound over time. You will make new tools and retire old tools that no longer work. That is investing in AI, not just using AI.
 
-### The YouTuber / uncompactor inversion (likely cold open)
-
-A YouTuber was glowing about a GitHub feature that summarizes Claude conversations before compaction. Jeff had already built the opposite — an uncompactor that recovers the original conversation when context is needed back, because he was tired of repeating himself after every compact. The YouTuber was spending (downloading a tool someone else built). Jeff was investing (built the tool that compounds his future sessions). Same problem, two opposite responses, two different relationships to AI tooling.
-
-This is the article's thesis in 30 seconds. Likely lede.
-
-## Resolved facts (2026-05-06)
-
-- **The tool the YouTuber promoted: Claude Mem.** YouTube Short link Jeff sent: https://youtube.com/shorts/0csuHVNgRnU. Title: "Claude Mem breakthrough in AI coding memory." Channel name didn't surface through scrape; nice-to-have, not load-bearing.
-- **The Uncompactor shape:** real engineering — LaunchAgent indexer + FastAPI retriever + hybrid SQLite FTS5 / ChromaDB / RRF pipeline. See _uncompactor-tech-reference.md. Article uses only the WHAT (`forge -- <query>` recalls past conversation), not the HOW.
-
-## Scaffold — rough beats, 2026-05-06
-
-Beat-by-beat outline. Voice work belongs to Jeff — these are the structural moves and what each beat needs to do, not prose to keep. Estimated length: 700-1100 words. Medium-shaped.
-
-### Beat 1 — Cold open: the inversion (Vonnegut deadpan)
-- Scene: scrolling YouTube. A creator is glowing about a tool you can download from GitHub that summarizes Claude conversations before context compaction.
-- Cut: Jeff already built the opposite. Calls it an uncompactor. Recovers the original conversation when context is needed back, because he was tired of repeating himself after every compact.
-- Land: same problem, two opposite responses. Two different relationships to the tooling.
-- Voice cue: Open flat ("I was watching a YouTube video the other day..."), undercut at the end ("...and I realized I'd built the inverse"). No drama on the realization.
-- ~150-250 words.
-
-### Beat 2 — The pattern, named
-- That moment crystallized something Jeff had been doing without a name for it.
-- Most Claude time was the first kind (ask it to do work).
-- The time that compounded was the second kind (ask it to help build something that made future Claude sessions faster).
-- The first kind was a transaction. The second was an investment.
-- ~100-150 words. Drop the financial frame here without explaining it.
-
-### Beat 3 — The compounding mechanism
-- Why the second kind compounds. Each tool you build doesn't just solve today — it shapes how you use AI tomorrow. Tomorrow's use shapes the next tool.
-- Real compounding, not metaphor.
-- Concrete example needed: a CLAUDE.md tweak (or hook, or script) that paid off across every later session. [OPEN: Jeff to provide specific example.]
-- ~150-200 words.
-
-### Beat 4 — The bar is your orientation, not your implementation
-- Most important beat for the hesitant-builder audience. Lowers the bar.
-- Investing doesn't mean "build hybrid-search RRF systems."
-- Three concrete shapes, laddering up:
-  1. **temp_todo.md** — externalized memory with one-word navigation. A scratch file. Reader can build it in 30 seconds and feel compounding within a week. Concrete, immediately copyable, viscerally relatable.
-  2. **"Ask before coding"** — one rule line in CLAUDE.md. Pure mindset, no tooling. Lowest possible bar.
-  3. **Tool Suggestion table** — Claude proactively pointing at the tools you've already built. Counter-intuitive payoff line: "you have to TELL the AI your tools exist?" — most readers haven't realized this.
-- The three together: file → rule → table. None require advanced engineering. Reader sees themselves in at least one.
-- The bar: did you spend the session BUILDING something that compounds, or just SPENDING the session on a task?
-- ~200 words.
-
-### Beat 5 — The diverging leverage gap
-- Two builders sitting next to each other for a year.
-- One spent every session on tasks. The other spent some sessions on investments.
-- A year later, their AI-leverage has diverged.
-- One has a custom CLAUDE.md, a few scripts, some hooks, maybe their own Uncompactor. The other has the same Claude they had a year ago.
-- Possibly the strongest beat for engineering-leadership readers riding along.
-- ~150-200 words.
-
-### Beat 6 — Closer (Vonnegut flat)
-- Bring it back to the YouTuber.
-- The YouTuber wasn't wrong — that summarizer is probably useful for somebody.
-- But the gap between downloading it and building the inverse is the gap that matters.
-- Most people will never notice they're on one side of it.
-- ~80-150 words.
-
-## Open questions before drafting
-
-1. ~~YouTuber name~~ — partially resolved (tool: Claude Mem; channel handle still missing, low priority).
-2. ~~Low-rung investing example~~ — resolved (see Beat 4 picks above).
-3. ~~Forge in the piece~~ — RESOLVED 2026-05-06: keep generic ("the product"). Article is about the pattern, not the product.
-
-## Reserve material — candidates not used in #5a (saved for future articles or revisits)
-
-- **Pre-run review with a separate agent** — same model can't honestly review its own output; spawn a fresh one. Too advanced for #5a's hesitant-builder bar. **Best home: #5b (Uncompactor / engineer companion)** or its own piece. The "same-model-can't-review-itself" insight is HN-shaped on its own.
-- **Fatigue protection** — already earmarked for #2 (Project Manager piece) via the stash at _stash-fatigue-and-quality-block.md. Don't double-use here.
-
+The youtuber wasn't wrong about the tool, it looks excellent, I had the same problem, and came up with a slightly different approach. The point is we were thinking AND INVESTING our time to solve ai coding problems.
