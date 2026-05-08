@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/jeffreyhelwig/Articles update-ref -d refs/original/refs/heads/main)",
+      "Bash(git -C /Users/jeffreyhelwig/Articles reflog expire --expire=now --all)",
+      "Bash(git -C /Users/jeffreyhelwig/Articles gc --prune=now)",
+      "Bash(git -C /Users/jeffreyhelwig/Articles add .gitignore src/content/articles/_whitepaper-ai-governance-scaffold.md)",
+      "Bash(git -C /Users/jeffreyhelwig/Articles commit -m ' *)",
+      "Bash(git -C /Users/jeffreyhelwig/Articles add .claude/settings.json)"
+    ]
+  }
+}
