@@ -1,0 +1,7 @@
+- [User profile — Jeff Helwig](user_profile.md) — Writer/builder, 5k+ LinkedIn (engineers + C-level), wants pushback with gusto
+- [Full value over teasers](feedback_full_value_over_teasers.md) — No teaser-style LinkedIn posts until reader traction exists; mirror full articles natively
+- [Docs-page aesthetic](feedback_docs_aesthetic.md) — Default visual: Stripe/Vercel/Tailwind docs energy, content-forward, no personal-brand flourish
+- [Voice — Hoosier (Vonnegut-shaped), not AI slop](feedback_no_ai_slop.md) — Jeff's voice is Vonnegut-shaped: flat declaratives, deadpan undercuts, fragments. Read edits against a Slaughterhouse-Five page; if it doesn't survive there, it doesn't survive here.
+- [B2B audience — tone down Vonnegut](feedback_b2b_tone_down_vonnegut.md) — Proactively warn Jeff when a piece skews compliance/CISO/eng-leadership; keep Vonnegut bones, dial back the self-deprecating undercuts.
+- [Personal site project](project_personal_site.md) — Astro + Tailwind + Vercel, canonical-and-syndicate to LinkedIn/Medium, no product link until after beta
+- [Articles in flight](project_articles_in_flight.md) — Four working titles, no drafts yet, 3-pass review pipeline (structure → line → fact)
